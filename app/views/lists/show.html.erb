@@ -1,2 +1,21 @@
 <h2><%= @list.name %></h2>
-<%= link_to 'Back to list', lists_path(@lists) %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+<% @bookmarks.each do |bookmark|%>
+<p><%= bookmark.comment %></p>
+<p><%= bookmark.movie.title %></p>
+<p><%= image_tag bookmark.movie.poster_url, width:100, height:100  %></p>
+<%end%>
+
+<hr>
+
+<hr>
+<p><%= link_to 'Back to list', lists_path(@lists) %></p>
+<p><%=link_to "Add Bookmark", new_list_bookmark_path(@list)%></p>

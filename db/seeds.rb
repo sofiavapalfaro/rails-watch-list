@@ -19,10 +19,10 @@ require 'faker'
 
 # Necesitamos un = title, overview, poster_url y un rating.
 10.times do
-  Movie.create(
-    title: Faker::Movie.title,
-    overview: Faker::Lorem.paragraph,
-    rating: rand(1..5),
-    poster_url: "https://source.unsplash.com/random"
+ Movie.create(
+   title: Faker::Movie.title,
+   overview: Faker::Lorem.paragraph,
+   rating: rand(1..5),
+   poster_url: "https://source.unsplash.com/random"
   )
-end
+ end
